@@ -1,0 +1,12 @@
+import os
+
+
+print("insira o nome que quer renomear os ficheiros: ")
+nome = input()
+folder = r'C:\teste\\'
+
+for file_name in os.listdir(folder):
+     old_name = folder + file_name
+     new_name = folder + nome + file_name
+     os.rename(old_name, new_name)
+print(os.listdir(folder));
